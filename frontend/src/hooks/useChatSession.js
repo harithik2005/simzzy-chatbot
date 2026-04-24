@@ -1,6 +1,6 @@
 import { useState, useCallback, useRef } from 'react';
 
-const API_URL = import.meta.env.VITE_CHATBOT_API || 'http://localhost:3001/api/chat';
+const API_URL = 'https://simzzy-chatbot.onrender.com/api/chat';
 
 function getOrCreateSessionId() {
   const stored = sessionStorage.getItem('sz_session_id');
@@ -31,9 +31,6 @@ const FALLBACK_RESPONSE = {
 
 const FALLBACK_QRS = ['Try again', 'Contact support'];
 
-/**
- * Main chat state + API hook
- */
 export function useChatSession() {
   const [messages, setMessages] = useState([GREETING]);
   const [quickReplies, setQuickReplies] = useState(GREETING_QRS);
@@ -45,16 +42,9 @@ export function useChatSession() {
     setMessages(prev => [...prev, { ...msg, id: Date.now() + Math.random(), timestamp: Date.now() }]);
   }, []);
 
-  /**
-   * Send a message to the backend
-   * @param {string} text - Message text
-   * @param {boolean} isQuickReply - Whether triggered by a quick reply button
-   * @param {boolean} windowOpen - Whether chat window is open (for notification dot logic)
-   */
   const sendMessage = useCallback(async (text, isQuickReply = false, windowOpen = true) => {
     if (!text.trim() || isLoading) return;
 
-    // Optimistic: show user message immediately
     addMessage({ role: 'user', content: text.trim() });
     setQuickReplies([]);
     setIsLoading(true);
@@ -76,7 +66,6 @@ export function useChatSession() {
 
       const data = await res.json();
 
-      // Persist new session ID
       if (data.sessionId && data.sessionId !== sessionIdRef.current) {
         sessionIdRef.current = data.sessionId;
         sessionStorage.setItem('sz_session_id', data.sessionId);
@@ -85,7 +74,6 @@ export function useChatSession() {
       addMessage({ role: 'assistant', content: data.response });
       setQuickReplies(data.quickReplies || []);
 
-      // Show notification dot if window is closed
       if (!windowOpen) setHasNotification(true);
 
     } catch (err) {
