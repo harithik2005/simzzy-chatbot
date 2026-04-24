@@ -1,0 +1,99 @@
+{
+  "version": "1.0.0",
+  "platform": "Simzzy eSIM Vending Platform",
+  "provider": "TSim Tech",
+  "supportEmail": "support@simzzy.com",
+  "supportHours": "Beijing Time (UTC+8): 08:00am – 10:30pm",
+  "supportWhatsApp": "+852 60140451",
+  "supportLine": "@tsim",
+
+  "faqs": [
+    {
+      "id": "faq_001",
+      "intent": "HOW_TO_PURCHASE",
+      "question": "How do I buy an eSIM?",
+      "answer": "Here's how to purchase your eSIM in a few simple steps:\n\n1. Visit our website and go to the **eSIM Explore** page.\n2. Search for your destination country or region.\n3. Use our **Device Compatibility Checker** to confirm your phone supports eSIM.\n4. Select a data plan (e.g., 1GB/7 Days, 5GB/30 Days).\n5. Complete payment securely via Razorpay.\n6. You will receive an **Order Confirmation email** immediately.\n7. Within minutes, a second **Fulfillment Email** with your QR code and installation instructions will arrive.\n\nYou do NOT need to create an account to purchase — guest checkout is supported.",
+      "quickReplies": ["Check device compatibility", "View plans", "How long for delivery?"]
+    },
+    {
+      "id": "faq_002",
+      "intent": "DELIVERY_DELAY",
+      "question": "How long does eSIM delivery take?",
+      "answer": "After a successful payment:\n\n- You'll receive an **Order Confirmation email** instantly.\n- Your **QR code and installation details** will be emailed to you typically **within a few minutes** once provisioned by TSim Tech.\n\nIf you haven't received your eSIM details after 15 minutes, please check your spam/junk folder first, then contact our support.",
+      "quickReplies": ["I didn't receive my email", "Where is my QR code?", "Contact support"]
+    },
+    {
+      "id": "faq_003",
+      "intent": "DEVICE_COMPATIBILITY",
+      "question": "How do I check if my device supports eSIM?",
+      "answer": "Our platform includes a built-in **Device Compatibility Checker**. Simply enter your phone model on the checkout or compatibility page, and the system will confirm if your device supports eSIM.\n\nGenerally, most modern smartphones released after 2018 (iPhone XS and later, many Android flagships) support eSIM, but it's best to verify using our checker before purchasing.",
+      "quickReplies": ["How to buy an eSIM?", "What is eSIM?"]
+    },
+    {
+      "id": "faq_004",
+      "intent": "LOST_QR_CODE",
+      "question": "I lost my QR code. How can I get it again?",
+      "answer": "Don't worry! You can retrieve your QR code in two ways:\n\n1. **Check your email inbox** — search for an email from us with the subject related to your eSIM order.\n2. **Login to your dashboard** — if you created an account, go to **Purchase History** to access your QR code and installation instructions anytime.\n\nIf you checked out as a guest and cannot find your email, please contact our support team.",
+      "quickReplies": ["Contact support", "How to install eSIM?"]
+    },
+    {
+      "id": "faq_005",
+      "intent": "ESIM_COVERAGE_QUERY",
+      "question": "Which countries are supported?",
+      "answer": "Our eSIM plans support a wide range of countries worldwide. You can view the full list of supported destinations on our **eSIM Explore page**.\n\nWhen viewing a specific plan, click **Package Details → View** to see the exact **Supported Regions** for that plan.\n\nPlease verify coverage for your exact travel destination before purchasing.",
+      "quickReplies": ["Browse plans", "How to buy?"]
+    },
+    {
+      "id": "faq_006",
+      "intent": "CHECK_DATA_USAGE",
+      "question": "How do I check my data usage?",
+      "answer": "You can check your data usage through your **user dashboard** under **Purchase History**. The package details show:\n\n- **Data Plan Usage** (total used)\n- **Usage of the Day** (for daily plans)\n- **Plan Status** (Using / Expired)\n\n⚠️ Note: Data usage reporting may be delayed by up to 1 hour. If your usage shows 0MB, this may be due to a reporting delay — not necessarily a problem with your eSIM.",
+      "quickReplies": ["My data ran out", "Plan expired", "No internet connection"]
+    },
+    {
+      "id": "faq_007",
+      "intent": "DAILY_RESET_QUERY",
+      "question": "When does my daily data plan reset?",
+      "answer": "The daily reset time depends on your specific plan and provider:\n\n- **Most plans** reset every 24 hours based on your plan's creation or activation time.\n- **Some providers** (e.g., CMLINK, China Unicom, CTM, 1O1O/CSL, CTEXCEL) reset at **23:59 UTC+8** daily.\n- **Other providers** (e.g., Plus, TIM, Orange, IIJ) reset every **24 hours after activation time**.\n\nYou can find the exact reset time in your package details under **Daily Plan Reset Time**.",
+      "quickReplies": ["Check data usage", "No internet connection"]
+    },
+    {
+      "id": "faq_008",
+      "intent": "MULTIPLE_DEVICES",
+      "question": "Can I use one eSIM on multiple devices?",
+      "answer": "No. Each eSIM can only exist on **one mobile phone at a time**. \n\nIf you need to switch to a new phone, please contact our support team. Note that reinstallation on a different device requires TSim Customer Service to handle the transfer — it cannot be done independently.",
+      "quickReplies": ["Transfer eSIM to new phone", "Contact support"]
+    },
+    {
+      "id": "faq_009",
+      "intent": "PURCHASE_HISTORY",
+      "question": "How do I view my past purchases?",
+      "answer": "If you created an account during purchase:\n1. Login to your dashboard on our website.\n2. Go to **Purchase History** to see all past and active eSIM purchases.\n3. From there you can also retrieve your QR codes and installation instructions.\n\nIf you checked out as a guest, you cannot view purchase history — but all details are in your confirmation emails.",
+      "quickReplies": ["I lost my QR code", "Contact support"]
+    },
+    {
+      "id": "faq_010",
+      "intent": "CONTACT_SUPPORT",
+      "question": "How can I contact customer support?",
+      "answer": "You can reach our support team through the following channels:\n\n- **Email:** support@simzzy.com\n- **WhatsApp:** +852 60140451\n- **Line:** @tsim\n\n**Support Hours:** Beijing Time (UTC+8) — 08:00am to 10:30pm\n\nFor emergencies outside business hours, please contact your account manager.",
+      "quickReplies": ["Submit a ticket", "Escalate issue"]
+    }
+  ],
+
+  "troubleshootingTopics": [
+    "QR_CODE_SCAN_ISSUE",
+    "ESIM_INSTALL_ISSUE",
+    "ESIM_ACTIVATE_ISSUE",
+    "NO_CONNECTION",
+    "SLOW_INTERNET",
+    "DATA_ROAMING_ISSUE",
+    "APN_ISSUE",
+    "WRONG_OPERATOR",
+    "PLAN_EXPIRED",
+    "DATA_EXHAUSTED",
+    "ESIM_DELETED",
+    "ESIM_DISABLED",
+    "ESIM_NOT_DOWNLOADED",
+    "REACTIVE_SIM"
+  ]
+}

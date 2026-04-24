@@ -1,0 +1,246 @@
+{
+  "intents": [
+    {
+      "id": "GREETING",
+      "name": "Greeting",
+      "category": "general",
+      "examples": ["hi", "hello", "hey", "good morning", "good evening", "start"]
+    },
+    {
+      "id": "FAREWELL",
+      "name": "Farewell",
+      "category": "general",
+      "examples": ["bye", "goodbye", "thanks bye", "see you", "that's all"]
+    },
+    {
+      "id": "HUMAN_ESCALATION",
+      "name": "Request Human Agent",
+      "category": "escalation",
+      "examples": ["talk to human", "speak to agent", "real person", "customer support", "talk to someone"]
+    },
+    {
+      "id": "REFUND_REQUEST",
+      "name": "Refund Request",
+      "category": "billing",
+      "examples": ["refund", "money back", "cancel order", "wrong purchase", "get my money", "payment refund", "cancel and refund"],
+      "hardOverride": true,
+      "hardOverrideResponse": "For refund-related requests, please email us at support@simzzy.com. Our team will assist you further."
+    },
+    {
+      "id": "PLAN_QUERY",
+      "name": "Plan Selection / Pre-Purchase Query",
+      "category": "sales",
+      "examples": ["which plan", "what plan", "best plan for", "how much data", "which eSIM", "recommend plan", "plan for japan"]
+    },
+    {
+      "id": "DEVICE_COMPATIBILITY",
+      "name": "Device Compatibility Check",
+      "category": "pre_purchase",
+      "examples": ["is my phone compatible", "does my device support eSIM", "can I use eSIM on", "iPhone eSIM support", "android eSIM"]
+    },
+    {
+      "id": "PRICE_QUERY",
+      "name": "Pricing Query",
+      "category": "sales",
+      "examples": ["how much does it cost", "price", "cost of plan", "how much for", "pricing"]
+    },
+    {
+      "id": "HOW_TO_PURCHASE",
+      "name": "How to Purchase",
+      "category": "sales",
+      "examples": ["how to buy", "how to order", "how do I purchase", "steps to buy", "buying process"]
+    },
+    {
+      "id": "PAYMENT_ISSUE",
+      "name": "Payment Processing Issue",
+      "category": "billing",
+      "examples": ["payment failed", "card declined", "payment not going through", "razorpay error", "payment stuck"]
+    },
+    {
+      "id": "QR_CODE_NOT_RECEIVED",
+      "name": "QR Code Not Received",
+      "category": "delivery",
+      "examples": ["didn't receive QR code", "no QR code", "QR code email not received", "where is my QR code", "QR code missing"]
+    },
+    {
+      "id": "QR_CODE_SCAN_ISSUE",
+      "name": "QR Code Scanning Problem",
+      "category": "installation",
+      "examples": ["can't scan QR code", "QR code not scanning", "QR code error", "scan failed", "camera not reading QR"]
+    },
+    {
+      "id": "ESIM_INSTALL_ISSUE",
+      "name": "eSIM Installation Problem",
+      "category": "installation",
+      "examples": ["can't install eSIM", "eSIM installation failed", "how to install eSIM", "eSIM not installing", "installation error"]
+    },
+    {
+      "id": "ESIM_ACTIVATE_ISSUE",
+      "name": "eSIM Activation Problem",
+      "category": "installation",
+      "examples": ["eSIM not activating", "activation failed", "how to activate eSIM", "eSIM stuck in activation"]
+    },
+    {
+      "id": "NO_CONNECTION",
+      "name": "No Internet Connection",
+      "category": "connectivity",
+      "examples": ["no internet", "can't connect", "no data", "internet not working", "no network", "eSIM not connecting"]
+    },
+    {
+      "id": "SLOW_INTERNET",
+      "name": "Slow Internet Speed",
+      "category": "connectivity",
+      "examples": ["slow internet", "slow data", "bad speed", "internet very slow", "low speed", "throttled"]
+    },
+    {
+      "id": "DATA_ROAMING_ISSUE",
+      "name": "Data Roaming Not Working",
+      "category": "connectivity",
+      "examples": ["data roaming", "roaming not working", "roaming off", "how to enable roaming", "roaming issue"]
+    },
+    {
+      "id": "APN_ISSUE",
+      "name": "APN Configuration Issue",
+      "category": "connectivity",
+      "examples": ["APN settings", "APN not correct", "how to set APN", "APN configuration", "wrong APN"]
+    },
+    {
+      "id": "WRONG_OPERATOR",
+      "name": "Wrong Operator Connected",
+      "category": "connectivity",
+      "examples": ["connected to wrong network", "wrong operator", "wrong carrier", "not my eSIM network", "different operator"]
+    },
+    {
+      "id": "PLAN_EXPIRED",
+      "name": "Plan Expired",
+      "category": "usage",
+      "examples": ["plan expired", "my plan ended", "eSIM expired", "plan is over", "validity ended"]
+    },
+    {
+      "id": "DATA_EXHAUSTED",
+      "name": "Data Used Up",
+      "category": "usage",
+      "examples": ["data finished", "data used up", "no more data", "data exhausted", "exceeded data limit", "out of data"]
+    },
+    {
+      "id": "CHECK_DATA_USAGE",
+      "name": "Check Data Balance / Usage",
+      "category": "usage",
+      "examples": ["how much data left", "check data usage", "remaining data", "data balance", "how much have I used"]
+    },
+    {
+      "id": "DAILY_RESET_QUERY",
+      "name": "Daily Plan Reset Time",
+      "category": "usage",
+      "examples": ["when does data reset", "daily plan reset time", "when does my data refresh", "reset time", "daily data refresh"]
+    },
+    {
+      "id": "ESIM_DELETED",
+      "name": "eSIM Deleted from Phone",
+      "category": "installation",
+      "examples": ["I deleted my eSIM", "eSIM deleted", "accidentally removed eSIM", "how to reinstall deleted eSIM"]
+    },
+    {
+      "id": "ESIM_DISABLED",
+      "name": "eSIM Disabled",
+      "category": "installation",
+      "examples": ["eSIM disabled", "eSIM turned off", "eSIM switched off", "how to enable eSIM"]
+    },
+    {
+      "id": "ESIM_NOT_DOWNLOADED",
+      "name": "eSIM Not Downloaded / Released State",
+      "category": "installation",
+      "examples": ["eSIM not downloaded", "eSIM in released state", "eSIM won't download", "QR scanned but eSIM not appearing"]
+    },
+    {
+      "id": "TRANSFER_TO_NEW_PHONE",
+      "name": "Transfer eSIM to New Device",
+      "category": "installation",
+      "examples": ["transfer eSIM", "move eSIM to new phone", "eSIM on different device", "change phone eSIM"]
+    },
+    {
+      "id": "DELIVERY_DELAY",
+      "name": "eSIM Delivery Delay",
+      "category": "delivery",
+      "examples": ["haven't received eSIM", "eSIM not delivered", "order taking long", "how long does delivery take", "delivery delayed"]
+    },
+    {
+      "id": "LOST_QR_CODE",
+      "name": "Lost / Can't Find QR Code",
+      "category": "delivery",
+      "examples": ["lost QR code", "can't find QR code", "QR code expired email", "need QR code again", "resend QR code"]
+    },
+    {
+      "id": "EMAIL_NOT_RECEIVED",
+      "name": "Confirmation Email Not Received",
+      "category": "delivery",
+      "examples": ["no email received", "confirmation email missing", "didn't get email", "email not arrived", "check spam"]
+    },
+    {
+      "id": "ESIM_COVERAGE_QUERY",
+      "name": "Coverage / Region Support Query",
+      "category": "pre_purchase",
+      "examples": ["does eSIM work in", "coverage in", "which countries supported", "does it work in japan", "supported regions"]
+    },
+    {
+      "id": "REACTIVE_SIM",
+      "name": "How to Reactive SIM",
+      "category": "connectivity",
+      "examples": ["how to reactive SIM", "SIM reactive", "restart SIM activation", "reactive button", "reactivate SIM"]
+    },
+    {
+      "id": "PHYSICAL_SIM_TOPUP",
+      "name": "Physical SIM Top-Up",
+      "category": "billing",
+      "examples": ["top up SIM", "add more data to physical SIM", "recharge SIM", "SIM top up"]
+    },
+    {
+      "id": "ORDER_STATUS",
+      "name": "Order Status Check",
+      "category": "delivery",
+      "examples": ["order status", "check my order", "where is my order", "order tracking", "order update"]
+    },
+    {
+      "id": "PURCHASE_HISTORY",
+      "name": "Purchase History",
+      "category": "account",
+      "examples": ["view purchases", "purchase history", "past orders", "my orders", "previous eSIMs"]
+    },
+    {
+      "id": "ACCOUNT_CREATION",
+      "name": "Account / Dashboard Help",
+      "category": "account",
+      "examples": ["create account", "how to login", "user dashboard", "sign up", "guest checkout"]
+    },
+    {
+      "id": "ICCID_QUERY",
+      "name": "ICCID / SIM Number Query",
+      "category": "technical",
+      "examples": ["what is ICCID", "find ICCID", "my ICCID number", "where to find card number", "SIM ICCID"]
+    },
+    {
+      "id": "EID_QUERY",
+      "name": "EID Device Number Query",
+      "category": "technical",
+      "examples": ["what is EID", "find my EID", "device EID", "EID number", "where is EID on iPhone"]
+    },
+    {
+      "id": "MULTIPLE_DEVICES",
+      "name": "eSIM on Multiple Devices",
+      "category": "technical",
+      "examples": ["use eSIM on two phones", "multiple devices", "can I share eSIM", "two devices same eSIM"]
+    },
+    {
+      "id": "CONTACT_SUPPORT",
+      "name": "Contact Support",
+      "category": "escalation",
+      "examples": ["contact support", "support email", "whatsapp support", "how to reach support", "support hours"]
+    },
+    {
+      "id": "OUT_OF_SCOPE",
+      "name": "Out of Scope Query",
+      "category": "fallback",
+      "examples": ["tell me a joke", "what is the weather", "who are you", "general questions unrelated to eSIM"]
+    }
+  ]
+}
